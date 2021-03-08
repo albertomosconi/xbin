@@ -17,6 +17,8 @@ h2 {
   color: rgb(255, 166, 0);
   margin-left: -15px;
   padding: 10px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 p {
@@ -36,4 +38,8 @@ button {
   border-radius: 4px;
 
   cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
