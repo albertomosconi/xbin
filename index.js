@@ -47,6 +47,10 @@ function complemento2(numero) {
   return vera_soluzione;
 }
 
+function randomInRange(max, min) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 function toggleEs(es) {
   var es_div = document.getElementById(es);
   es_div.classList.toggle("hide");
@@ -62,7 +66,7 @@ function generaES1() {
   ms.value = "";
   c2.value = "";
 
-  es1_num.innerText = Math.floor(Math.random() * 200 - 100);
+  es1_num.innerText = randomInRange(600, -600);
 }
 
 function checkES1() {
@@ -82,6 +86,21 @@ function checkES1() {
   }
 }
 
+function generaES2() {
+  var es2_num = document.getElementById("es2-num");
+
+  es2_num.innerText = codificaNaturale(randomInRange(1023, 0));
+}
+
+function checkES2() {
+  var es2_num = document.getElementById("es2-num");
+  var cn = document.getElementById("es2-cn");
+  var ms = document.getElementById("es2-ms");
+  var c2 = document.getElementById("es2-c2");
+
+  alert("cosa vuoi");
+}
+
 var es1_btn_gen = document.getElementById("es1-gen");
 es1_btn_gen.addEventListener("click", generaES1);
 
@@ -93,3 +112,9 @@ es1_title.addEventListener("click", () => toggleEs("es1"));
 
 var es2_title = document.getElementById("es2-title");
 es2_title.addEventListener("click", () => toggleEs("es2"));
+
+var es2_btn_gen = document.getElementById("es2-gen");
+es2_btn_gen.addEventListener("click", generaES2);
+
+var es2_btn_check = document.getElementById("es2-check");
+es2_btn_check.addEventListener("click", checkES2);
