@@ -53,7 +53,7 @@ function toggleEs(es) {
 }
 
 function generaES1() {
-  var es1 = document.getElementById("es1");
+  var es1_num = document.getElementById("es1-num");
   var cn = document.getElementById("es1-cn");
   var ms = document.getElementById("es1-ms");
   var c2 = document.getElementById("es1-c2");
@@ -62,19 +62,19 @@ function generaES1() {
   ms.value = "";
   c2.value = "";
 
-  es1.innerText = Math.floor(Math.random() * 200 - 100);
+  es1_num.innerText = Math.floor(Math.random() * 200 - 100);
 }
 
 function checkES1() {
-  var es1 = document.getElementById("es1");
+  var es1_num = document.getElementById("es1-num");
   var cn = document.getElementById("es1-cn");
   var ms = document.getElementById("es1-ms");
   var c2 = document.getElementById("es1-c2");
 
   if (
-    cn.value === codificaNaturale(parseInt(es1.innerText)) &&
-    ms.value === moduloSegno(parseInt(es1.innerText)) &&
-    c2.value === complemento2(parseInt(es1.innerText))
+    cn.value === codificaNaturale(parseInt(es1_num.innerText)) &&
+    ms.value === moduloSegno(parseInt(es1_num.innerText)) &&
+    c2.value === complemento2(parseInt(es1_num.innerText))
   ) {
     alert("bindi");
   } else {
